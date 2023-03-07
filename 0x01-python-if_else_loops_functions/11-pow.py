@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def myfunc(a, b):
-	return pow(a,b)
-print(pow(5, 2))
+def pow(a, b):
+    ans = a ** b
+print(pow(ans))
