@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-import 5-variable_load
-a = 98
+if __name__ == "__main__":
+    from variable_load_5 import a
+    print("{}".format(a))
