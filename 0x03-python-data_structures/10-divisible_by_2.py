@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def divisible_by_2(my_list=[]):
     if my_list[idx] % 2 == 0:
-        return 'True'
+        return my_list = True
     else:
-        return 'False'
+        return my_list = False
