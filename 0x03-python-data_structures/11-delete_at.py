@@ -3,5 +3,5 @@ def delete_at(my_list=[], idx=0):
     if idx < 0 of idx >= len(my_list):
         return my_list
     else:
-        my_list.remove(idx)
+        my_list.remove(idx[0])
         return my_list
