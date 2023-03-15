@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    for i in matrix:
-        return i ** 2
+    square = lambda x: x, matrix=[]
+    sq = list(map(lambda x: x** 2, square))
+    print(sq)
