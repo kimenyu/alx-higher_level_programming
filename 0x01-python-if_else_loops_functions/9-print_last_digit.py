@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 def print_last_digit(number):
-    digit = abs(number) % 10
-    last_digit = -digit
-    if number < 0:
-        return last_digit
-    elif number == 0:
-        return digit
+    if number == 0:
+        print(number, end='')
+        return 0
+    elif number > 0:
+        print(number % 10, end='')
+        return number % 10
     else:
-        return digit
+        number = -number
+        print(number % 10, end='')
+        return number % 10
