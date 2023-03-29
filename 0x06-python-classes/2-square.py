@@ -1,16 +1,13 @@
 #!/usr/bin/python3
-"""Working on op with python"""
+"""class Square that defines a square"""
 
 
 class Square():
-    """Class representing a square"""
+    """square class its proper validation and size"""
 
     def __init__(self, size=0):
-        """ initialize the class with a private square attribute"""
-
-        try:
-            if (typeof(size) is not int):
-                raise TypeError("size must be an integer")
-            else if(size < 0):
-                raise ValueError("size must be >= 0")
+        if (type(size) is not int):
+            raise TypeError("size must be an integer")
+        elif (size < 0):
+            raise ValueError("size must be >= 0")
         self.__size = size
