@@ -1,3 +1,6 @@
 #!/usr/bin/python3
 class Square():
-    __size
+    __size = none
+
+    def __init__(self, size):
+        self.__size = size
