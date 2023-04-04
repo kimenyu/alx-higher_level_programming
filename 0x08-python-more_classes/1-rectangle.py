@@ -3,13 +3,13 @@
 class Rectangle:
     """ Creating a private instance"""
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         """Property to retrieve it"""
-        return self.__width
+        return self._width
 
     @width.setter
     def width(self, value):
@@ -18,12 +18,12 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
+        self._width = value
 
     @property
     def height(self):
         """Creating a property to retrieve it"""
-        return self.__height
+        return self._height
 
     @height.setter
     def height(self, value):
@@ -32,5 +32,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
-
+        self._height = value
