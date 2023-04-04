@@ -1,18 +1,7 @@
 #!/usr/bin/python3
 """class Rectangle  to define a rectangle"""
 class Rectangle:
-      """
-    Defines class rectangle with private attribute width and height
-    Args:
-        width (int): width
-        height (int): height
-    Functions:
-        __init__(self, width, height)
-        width(self)
-        width(self, value)
-        height(self)
-        height(self, value)
-    """
+      """Creating a rectangle class"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
