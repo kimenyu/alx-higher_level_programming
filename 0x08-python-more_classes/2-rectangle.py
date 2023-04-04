@@ -58,13 +58,8 @@ class Rectangle:
         """Public instance to calculate the area"""
         return self.__width * self.__height
 
-    @property
     def perimeter(self):
-        """Getter returns perimeter"""
-        return 2 *(self.__width + self.__height)
-
-    @perimeter.setter
-    def perimeter(self, value):
-        """Setter sets width and height is  not 0"""
-        if self.__width == 0 and self.___height == 0:
+        """ Return 2*width + 2*height (or return 0 if width or height is 0)"""
+        if self.__width == 0 or self.___height == 0:
             return 0
+        return 2 * (self.__width + self.__height)
