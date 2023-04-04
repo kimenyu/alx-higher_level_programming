@@ -3,8 +3,8 @@
 class Rectangle:
     """ Creating a private instance"""
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
