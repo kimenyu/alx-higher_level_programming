@@ -54,11 +54,12 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    @property
     def area(self):
         """instance to calculate the area"""
         return self.__width * self.__height
 
-    
+    @property
     def perimeter(self):
         """public instance method to calculate perimeter"""
         if self.__width == 0 or self.__height == 0:
