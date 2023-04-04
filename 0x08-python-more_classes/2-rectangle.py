@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
 Module 2-rectangle
-Contains class Rectangle
-with private attribute width and height
+Contains class Rectangle with private attribute width and height,
+and public area and perimeter methods
 """
 
 
@@ -20,6 +20,8 @@ class Rectangle:
         width(self, value)
         height(self)
         height(self, value)
+        area(self)
+        perimeter(self)
     """
     def __init__(self, width=0, height=0):
         """ Initialize rectangles """
