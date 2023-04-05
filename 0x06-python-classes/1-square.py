@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+
 """
 Defining a class based on 0-square.py
 
 """
 class Square:
+
     """
     Class square definition
 
@@ -12,6 +14,7 @@ class Square:
 
     """
     def __init__(self, size):
+
         """
         instatiates square
 
