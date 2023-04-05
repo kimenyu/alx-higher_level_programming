@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
-Defining a class based on 0-square.py
+"""Defining a class based on 0-square.py
 
 """
 class Square:
-    """
-    defining a class with a private inatsnce attribute size
-    """
-    def __init__(self, size=0):
-        """
-        private instance size
+    def __init__(self, size):
+        """Private instance attribute size to the
+        class Square
         """
         self.__size = size
