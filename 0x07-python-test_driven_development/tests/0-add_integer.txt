@@ -2,27 +2,19 @@
 ===============================
  How to 0-add_integer.py
 ===============================
-
-This library is very simple, since it only has one function called
-``add_integer()``.
-
-Numbers
-=======
-
-``add_integer()`` returns the addition of its arguments.  For numbers,
-that value is equivalent to using the ``+`` operator.
+A function to add two integers
 
 ::
     >>> add_integer = __import__("0-add_integer").add_integer
-    >>> add_integer(2, 3)
-    5
+    >>> add_integer(5, 5)
+    10
 
 It also works with floating-point values and reverts it to int.
 
 ::
 
-    >>> add_integer(2.0, 3.0)
-    5
+    >>> add_integer(5.0, 5.0)
+    10
 
 a has to be something or an exception will be thrown.
 if b is not specified it will default to 98
@@ -34,11 +26,6 @@ if b is not specified it will default to 98
     100
     >>> add_integer(-5.5,100.3)
     95
-
-Non-Numbers
-===========
-
-Non-numbers should throw TypeError Exceptions
 
 ::
 
