@@ -1,7 +1,10 @@
-# run test with python3 -m doctest -v ./tests/0-add_integer.txt
+#3-say_my_name.txt
+===============================
+ How to 3-say_my_name.py
+===============================
 
-First import method to test
->>> say_my_name = __import__('3-say_my_name.py').say_my_name
+This library is very simple, since it only has one function called
+``say_last_name()``.
 
 >>> say_my_name("Walter", "White")
 My name is Walter White
@@ -9,10 +12,11 @@ My name is Walter White
 >>> say_my_name("Jesse")
 My name is Jesse 
 
->>>say_my_name(6, "Jese")
+>>> say_my_name(123, "White")
 Traceback (most recent call last):
-TypeError: first_name must be a  string
+TypeError: first_name must be a string
 
->>>say_my_name("Jesse", 7)
+>>> say_my_name("Walter", 456)
 Traceback (most recent call last):
-TypeError: lat_name must be a string
+TypeError: last_name must be a string
+
