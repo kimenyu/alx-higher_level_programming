@@ -26,7 +26,4 @@ def add_integer(a, b=98):
         b = int(b)
 
     # Perform the addition and return the result as an integer
-    result = a + b
-    if not isinstance(result, int):
-        raise TypeError("Result must be an integer")
-    return result
+    return int(a) + int(b)
