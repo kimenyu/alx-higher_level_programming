@@ -8,9 +8,9 @@ Accepts two values, whether int or float, and casts them to int before adding
 
 def add_integer(a, b=98):
     """
-    Returns sum a + b as int
+    Returns a + b as int
     """
-    if not isinstance (int, float)):
+    if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     elif not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
