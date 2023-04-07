@@ -35,7 +35,7 @@ def matrix_mul(m_a, m_b):
             raise TypeError("each row of m_b must should be of the same size")
 
     l = []
-    my_matrix = []
+    new_matrix = []
     n = 0
     for rowA in range(len(m_a)):
         l = []
@@ -44,6 +44,6 @@ def matrix_mul(m_a, m_b):
                 n += m_a[rowA][i] * m_b[i][colB]
             l.append(n)
             n = 0
-        my_matrix.append(l)
+        new_matrix.append(l)
 
-    return my_matrix
+    return new_matrix
