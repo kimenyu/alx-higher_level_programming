@@ -1,5 +1,8 @@
 #!/usr/python3
+"""matrix divider module"""
 def matrix_divided(matrix, div):
+     """divides a matrix all elements by divider
+    """
     if not isinstance((element,  (int, float)) for row in matrix for element in row):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if len(row) != len(matrix[0] for row in matrix):
