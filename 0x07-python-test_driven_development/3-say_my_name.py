@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
-say my name module
+
+Contains method that prints out "My name is [full name]"
+Takes in two strings: first and last name
 """
 
 
 def say_my_name(first_name, last_name=""):
-    
     """
     Prints "My name is [full name]"
     """
