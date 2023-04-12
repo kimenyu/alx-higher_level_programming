@@ -4,8 +4,9 @@
 
 
 def write_file(filename="", text=""):
-    """writes a string"""
-    with open(filename, mode = 'w', encoding='utf-8') as :
-        f.write(text)
-        print(text.len())
-        f.close()
+    """Writes a string to a text file (UTF8) and returns the number of characters written"""
+
+    # Open the file in write mode and set encoding to UTF-8
+    with open(filename, "w", encoding="utf-8") as file:
+        num_chars_written = file.write(text)
+    return num_chars_written
