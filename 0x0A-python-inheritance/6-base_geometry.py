@@ -6,6 +6,8 @@ class BaseGeometry:
     """instance of geometry class"""
     def __init__(self):
         """initialize class"""
+        pass
+
     def area(self):
         """Exception error"""
     	raise Exception("area() is not implemented")
