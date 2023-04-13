@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""lookpu"""
-
+"""lookup"""
 
 
 def lookup(obj):
-    """Return a list"""
-    mydir = dir(obj)
-    return list(mydir)
+    """returns list of dir()"""
+    return([x for x in dir(obj)])
