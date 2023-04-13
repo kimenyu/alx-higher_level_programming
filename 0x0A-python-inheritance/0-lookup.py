@@ -1,9 +1,8 @@
 #!/usr/bin/python3
+"""lookpu"""
 
-"""
-A function that returns available atrributes
 
-"""
+
 def lookup(obj):
     """
     Return a list
