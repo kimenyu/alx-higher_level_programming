@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""Returns True"""
+"""subclass checker"""
 
 
 def inherits_from(obj, a_class):
-    """Returns True"""
-    if issubclass and isinstance (obj, a_class):
-        return True
-    else:
+    """returns subclass yes"""
+    if type(obj) == a_class:
         return False
+    return issubclass(type(obj), a_class)
