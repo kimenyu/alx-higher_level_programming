@@ -3,10 +3,6 @@
 
 
 class BaseGeometry:
-    """instance of geometry class"""
-    def __init__(self):
-        """initialize class"""
-        pass
 
     def area(self):
         """raises exception"""
@@ -14,14 +10,20 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """validates value for integer and positive"""
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
+"""class rectangle"""
+
+
 class Rectangle(BaseGeometry):
-    """Creating a subclass"""
+    """creates a sub class"""
     def __init__(self, width, height):
-        """Instantiate the class"""
-        self.__width = width
-        self.__height = height
+        """initializes rectangle"""
+        if not super().integer_validator("width", width):
+            self.__width = width
+        if not super().integer_validator("height", height):
+            self.__height = height
