@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""a class"""
-
+"""create an empty class"""
 
 
 class BaseGeometry:
-    """empty"""
-    def __init__(self):
-        pass
+    """empty class """
+    pass
 
     def area(self):
         """raise exception"""
