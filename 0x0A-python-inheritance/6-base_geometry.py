@@ -2,6 +2,7 @@
 """a class"""
 
 
+
 class BaseGeometry:
     """empty"""
     pass
@@ -9,4 +10,3 @@ class BaseGeometry:
     def area(self):
         """raises exception"""
         raise Exception("area() is not implemented")
-
