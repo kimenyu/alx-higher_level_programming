@@ -5,4 +5,4 @@
 
 def lookup(obj):
     """returns attributes"""
-    return [i for i in dir(obj)]
+    print( [i for i in dir(obj)])
