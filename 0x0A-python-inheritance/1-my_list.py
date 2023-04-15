@@ -1,7 +1,8 @@
-#!/usr/python3
-"""A class that inherits"""
+#!/usr/bin/python3
+"""class mylist"""
+
 
 class MyList(list):
-    """Public instance method"""
+    """prints sorted list of class"""
     def print_sorted(self):
         print(sorted(self))
