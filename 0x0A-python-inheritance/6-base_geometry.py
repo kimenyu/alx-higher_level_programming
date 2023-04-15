@@ -5,7 +5,8 @@
 
 class BaseGeometry:
     """empty"""
-    pass
+    def __init__(self):
+        pass
 
     def area(self):
         """raises exception"""
