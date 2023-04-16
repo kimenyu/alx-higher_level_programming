@@ -1,23 +1,13 @@
 #!/usr/bin/python3
-"""Create an empty class"""
+"""class Square that defines a square"""
 
 
-class Square:
-    """Instantiate size as private attribute """
+class Square():
+    """square class its proper validation and size"""
+
     def __init__(self, size=0):
-        self.__size = size
-
-    @property
-    def size(self):
-        """getter method"""
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        """instantiate"""
-        if(type(size) is not int):
+        if (type(size) is not int):
             raise TypeError("size must be an integer")
-        if (value < 0):
+        elif (size < 0):
             raise ValueError("size must be >= 0")
-
-        self.__size = value
+        self.__size = size
