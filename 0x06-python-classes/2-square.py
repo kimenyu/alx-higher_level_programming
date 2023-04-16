@@ -5,19 +5,19 @@
 class Square:
     """Instantiate size as private attribute """
     def __init__(self, size):
-        self.__size = size
+        self._size = size
 
     @property
     def size(self):
         """getter method"""
-        return self.__size
+        return self._size
 
     @size.setter
     def size(self, value):
         """instantiate"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
 
-        self.__size = value
+        self._size = value
