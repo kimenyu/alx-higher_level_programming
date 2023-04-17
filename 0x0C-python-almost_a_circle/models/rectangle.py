@@ -18,32 +18,32 @@ class Rectangle(Base):
     """initializes"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self._width = width
+        self._height = height
+        self._x = x
+        self._y = y
         
 
     def get_width(self):
-        return self.__width
+        return self._width
 
     def set_width(self, value):
-        self.__width = value
+        self._width = value
 
     def get_height(self):
-        return self.__height
+        return self._height
 
     def set_height(self, value):
-        self.__height = value
+        self._height = value
 
     def get_x(self):
-        return self.__x
+        return self._x
 
     def set_x(self, value):
-        self.__x = value
+        self._x = value
 
     def get_y(self):
-        return self.__y
+        return self._y
 
     def set_y(self, value):
-        self.__y = value
+        self._y = value
