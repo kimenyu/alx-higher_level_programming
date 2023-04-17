@@ -73,8 +73,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """display a rectable of '#' """
-        for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
-            print()
+        """prints a rectangle of hashes"""
+        print('\n' * self.y, end="")
+        print(''.join(' ' * self.x + '#' * self.width + '\n'
+                      for times in range(self.height)), end="")
