@@ -1,8 +1,18 @@
 #!/usr/bin/python3
+"""Creating a class"""
 
-""" Defines a class Rectangle that inherits from Base"""
-Base = __import__('base.py').Base
 
+class Base:
+    """private class attribute"""
+    __nb_objects = 0
+
+    def __init__(self, id=None):
+        """inits the class"""
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
 class Rectangle(Base):
     """initializes"""
