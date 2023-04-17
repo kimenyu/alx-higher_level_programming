@@ -9,12 +9,13 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """super"""
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     def validator(self, value):
+        """validates"""
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         if (name is 'width' or name is 'height') and value <= 0:
