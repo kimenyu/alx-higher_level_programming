@@ -14,7 +14,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def validator(self, value):
+    def validator(self, name, value):
         """validates"""
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
@@ -24,7 +24,6 @@ class Rectangle(Base):
             raise ValueError("{} must be >= 0".format(name))
 
 
-        
     @property
     def width(self):
         """get width"""
