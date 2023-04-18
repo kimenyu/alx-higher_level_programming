@@ -14,13 +14,13 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def validator(self, value):
+    def validator(self,name, value):
         """validates"""
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
-        if (name is 'width' or name is 'height') and value <= 0:
+        if (name == 'width' or name == 'height') and value <= 0:
             raise ValueError("{} must be > 0".format(name))
-        if (name is 'x' or name is 'y') and value < 0:
+        if (name == 'x' or name == 'y') and value < 0:
             raise ValueError("{} must be >= 0".format(name))
 
         
