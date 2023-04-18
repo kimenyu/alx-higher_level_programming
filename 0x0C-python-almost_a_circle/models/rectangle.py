@@ -74,8 +74,9 @@ class Rectangle(Base):
 
     def display(self):
         """display a rectable of '#' """
-        for i in range(self.x):
-            for j in range(self.y):
+        for i in range(self.y):
+            print(' ' * self.x, end='')
+            for j in range(self.width):
                 print("#", end="")
             print()
    
