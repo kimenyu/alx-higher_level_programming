@@ -13,6 +13,14 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+    def update(self, *args):
+        """updates attributes"""
+        if args:
+            i = 0
+            keys = ['id', 'width', 'height', 'x', 'y']
+            for arg in args:
+                setattr(self, keys[i], arg)
+                i += 1
 
     def validator(self,name, value):
         """validates"""
