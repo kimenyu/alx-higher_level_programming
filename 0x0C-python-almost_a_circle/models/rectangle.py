@@ -72,13 +72,11 @@ class Rectangle(Base):
         """returns area"""
         return self.width * self.height
 
-    def display(self):
-        """display a rectable of '#' """
-        for i in range(self.y):
-            print(' ' * self.x, end='')
-            for j in range(self.width):
-                print("#", end="")
-            print()
+     def display(self):
+        """prints a rectangle of hashes"""
+        print('\n' * self.y, end="")
+        print(''.join(' ' * self.x + '#' * self.width + '\n'
+                      for times in range(self.height)), end="")
    
     def __str__(self):
         """string representative of class"""
