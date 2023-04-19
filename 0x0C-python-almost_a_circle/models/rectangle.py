@@ -25,7 +25,10 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
-
+    def to_dictionary(self):
+        """returns dictionary"""
+        dictionary = {'id':self.id, 'width':self.width, 'height':self.height, 'x':self.x, 'y';self.y}
+        return dictionary
     def validator(self,name, value):
         """validates"""
         if not isinstance(value, int):
@@ -34,9 +37,7 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(name))
         if (name == 'x' or name == 'y') and value < 0:
             raise ValueError("{} must be >= 0".format(name))
-
-    
-        
+ 
     @property
     def width(self):
         """get width"""
