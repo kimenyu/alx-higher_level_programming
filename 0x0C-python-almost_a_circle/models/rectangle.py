@@ -27,8 +27,9 @@ class Rectangle(Base):
                     setattr(self, key, value)
     def to_dictionary(self):
         """returns dictionary"""
-        dictionary = {'id':self.id, 'width':self.width, 'height':self.height, 'x':self.x, 'y';self.y}
-        return dictionary
+        d = {'id':self.id, 'width':self.width, 'height':self.height, 'x':self.x, 'y';self.y}
+        return d
+
     def validator(self,name, value):
         """validates"""
         if not isinstance(value, int):
