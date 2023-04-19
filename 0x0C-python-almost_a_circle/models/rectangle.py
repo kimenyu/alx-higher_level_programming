@@ -3,7 +3,6 @@
 from models.base import Base
 
 
-
 class Rectangle(Base):
     """initiate"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -13,7 +12,8 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-    def update(self, *args):
+
+    def update(self, *args, **kwargs):
         """updates attributes"""
         if args:
             i = 0
@@ -21,6 +21,10 @@ class Rectangle(Base):
             for arg in args:
                 setattr(self, keys[i], arg)
                 i += 1
+        elif kwargs:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     def validator(self,name, value):
         """validates"""
@@ -31,6 +35,7 @@ class Rectangle(Base):
         if (name == 'x' or name == 'y') and value < 0:
             raise ValueError("{} must be >= 0".format(name))
 
+    
         
     @property
     def width(self):
@@ -80,12 +85,10 @@ class Rectangle(Base):
         """returns area"""
         return self.width * self.height
 
-     def display(self):
-        """prints a rectangle of hashes"""
+    def display(self):
+        """display"""
         print('\n' * self.y, end="")
         print(''.join(' ' * self.x + '#' * self.width + '\n'
                       for times in range(self.height)), end="")
-   
     def __str__(self):
-        """string representative of class"""
-        return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
+        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}'
