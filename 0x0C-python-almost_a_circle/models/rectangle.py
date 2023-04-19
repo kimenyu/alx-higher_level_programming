@@ -4,14 +4,20 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """initiate"""
+    """makes a new rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """super"""
-        super().__init__(id)
+        """initializes"""
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
+
+    def to_dictionary(self):
+        """dictionary"""
+        dic = {'id': self.id, 'width': self.width, 'height': self.height,
+               'x': self.x, 'y': self.y}
+        return dic
 
     def update(self, *args, **kwargs):
         """updates attributes"""
@@ -25,21 +31,16 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
-    def to_dictionary(self):
-        """returns dictionary"""
-        d = {'id':self.id, 'width':self.width, 'height':self.height,
-                'x':self.x, 'y';self.y}
-        return d
 
-    def validator(self,name, value):
-        """validates"""
+    def validator(self, name, value):
+        """validates the shit out of it"""
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
-        if (name == 'width' or name == 'height') and value <= 0:
+        if (name is 'width' or name is 'height') and value <= 0:
             raise ValueError("{} must be > 0".format(name))
-        if (name == 'x' or name == 'y') and value < 0:
+        if (name is 'x' or name is 'y') and value < 0:
             raise ValueError("{} must be >= 0".format(name))
- 
+
     @property
     def width(self):
         """get width"""
@@ -74,8 +75,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """sets x"""
         self.validator("x", value)
+        """sets x"""
         self.__x = value
 
     @y.setter
@@ -85,13 +86,17 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """returns area"""
+        """gets area"""
         return self.width * self.height
 
     def display(self):
-        """display"""
+        """prints a rectangle of hashes"""
         print('\n' * self.y, end="")
         print(''.join(' ' * self.x + '#' * self.width + '\n'
                       for times in range(self.height)), end="")
+
     def __str__(self):
-        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}'
+        """gets rectangle"""
+        return "[{}] ({}) {}/{} - {}/{}".format(
+            type(self).__name__, self.id, self.x, self.y,
+            self.width, self.height)
