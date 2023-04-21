@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-import json
 """Creating a class"""
-from models.rectangle import Rectangle
+import json
 
 
 class Base:
