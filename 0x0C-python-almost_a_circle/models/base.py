@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import json
 """Creating a class"""
 
 
@@ -15,6 +16,7 @@ class Base:
             self.id = Base.__nb_objects
     @staticmethod
     def to_json_string(list_dictionaries):
+        """to json"""
         if list_dictionaries is None:
             return ""
         else:
