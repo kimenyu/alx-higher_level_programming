@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import json
 """Creating a class"""
+from models.rectangle import Rectangle
 
 
 class Base:
@@ -14,10 +15,12 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """to json"""
         if list_dictionaries is None:
             return ""
         else:
-            return list_dictionaries.dumps()
+            data = json.dumps(list_dictionaries)
+            return data
