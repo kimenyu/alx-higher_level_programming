@@ -18,7 +18,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """to json"""
-        if list_dictionaries is None:
+        if list_dictionaries ==  None:
             return ""
         else:
             data = json.dumps(list_dictionaries)
