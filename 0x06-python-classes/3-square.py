@@ -5,6 +5,7 @@
 class Square:
     """square"""
     def __init__(self, size=0):
+        """instantiate"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
