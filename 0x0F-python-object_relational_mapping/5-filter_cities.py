@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-# gets all states via python yee boi with your own state
+# gets all CITIES
 
 
 def main(args):
-    # gets all state stuff by N
+    # gets all CITY stuff
     if len(args) != 5:
         raise Exception("need 4 arguments!")
     db = MySQLdb.connect(host='localhost',
@@ -11,14 +11,11 @@ def main(args):
                          passwd=args[2],
                          db=args[3])
     cur = db.cursor()
-    cur.execute(
-        "SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC"
-        .format(args[4]))
+    cur.execute("SELECT c.name FROM cities\
+            c JOIN states s ON s.id=c.state_id\
+            WHERE s.name=%s ORDER BY c.id", (args[4],))
     states = cur.fetchall()
-    for state in states:
-        if state[1] == args[4]:
-            print(state)
-
+    print(", ".join(map(lambda x: "%s" % x, states)))
 
 if __name__ == "__main__":
     import sys
