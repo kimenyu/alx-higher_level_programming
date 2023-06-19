@@ -13,6 +13,6 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states")
     rows = cur.fetchall()
     for row in rows:
-	print(row)
+        print(row)
     cur.close()
-    db.close()  
+    db.close()
