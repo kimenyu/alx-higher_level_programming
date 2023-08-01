@@ -3,4 +3,4 @@
 
 def lookup(obj):
 	"""returns"""
-	return list(dir(obj))
+	return [attr for attr in dir(obj) if not attr.startswith('__')]
