@@ -3,4 +3,4 @@
 
 def lookup(obj):
 	"""returns"""
-	return [attr for attr in dir(obj)]
+	return dir(obj)
