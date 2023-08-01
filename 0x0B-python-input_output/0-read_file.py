@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""a function that reads a file"""
+"""This module defines a text file-reading function"""
 
 
 def read_file(filename=""):
-	"""use the with statement"""
-	with open(filename, 'r', encoding="utf-8") as f:
-		for line in f:
-			print(line, end="")
+    """Prints the contents of a UTF8 text file"""
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")
