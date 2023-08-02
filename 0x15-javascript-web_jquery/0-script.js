@@ -1,3 +1,2 @@
-$(document).ready(function() {
-    $('header').css('color', '#ff0000');
-});
+const myHeader = document.querySelector('header');
+myHeader.style.color = '#FF0000';
